@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    </head>
+    <body>
+
+        <div class="pl-3 pr-3 pb-3 pt-1">
+        
+            <!-- NAVIGATOR -->
+            <div class="tabs is-centered">
+                <ul>
+                    <li class="tab is-active" data-target="pomodoro">
+                        <a>Pomodoro</a>
+                    </li>
+                    <li class="tab" data-target="short-break">
+                        <a>Short Break</a>
+                    </li>
+                    <li class="tab" data-target="long-break">
+                        <a>Long Break</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- TIMER -->
+            <div id="timer">
+                <div id="countdown" class="is-size-1 has-text-centered pb-5">
+                </div>
+                <div style="display: grid; grid-template-columns: auto auto; gap: 12px;">
+                    <div>
+                        <button id="shorterButton" class="button is-info is-fullwidth">Shorter</button>
+                    </div>
+                    <div>
+                        <button id="longerButton" class="button is-info is-fullwidth">Longer</button>
+                    </div>
+                    <div>
+                        <button id="stopResetButton" class="button is-danger is-fullwidth" disabled>Stop</button>
+                    </div>
+                    <div>
+                        <button id="startButton" class="button is-success is-fullwidth">Start</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BUY ME A COFFEE -->
+            <div class="has-text-centered pt-4 is-size-7">
+                <a target="_blank" href="https://www.buymeacoffee.com/norbusonam">Buy me a coffee</a>
+            </div>
+        
+        </div>
+
+        <script src="./index.js"></script>
+
+    </body>
+</html>
