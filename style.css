@@ -1,0 +1,5 @@
+.tab.is-disabled {
+    pointer-events: none;
+    cursor: not-allowed !important;
+    opacity: 50%;
+}
