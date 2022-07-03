@@ -48,6 +48,7 @@ const sendNotification = (currentTimer) => {
             },
         ],
         type: 'basic',
+        priority: 2,
         iconUrl: './bell.png',
         requireInteraction: true,
     })
