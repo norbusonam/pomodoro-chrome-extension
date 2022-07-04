@@ -1,6 +1,6 @@
 {
     "name": "Pomodoro Timer",
-    "description": "A simple customizable pomodoro timer to keep you on track.",
+    "description": "A simple, customizable Pomodoro timer to keep you on track",
     "version": "1.0",
     "manifest_version": 3,
     "permissions": ["storage", "notifications"],
@@ -8,7 +8,7 @@
       "service_worker": "background.js"
     },
     "action": {
-      "default_popup": "popup.html"
+      "default_title": "Open Pomodoro Timer"
     },
     "icons": { 
       "16": "icons/icon16.png",

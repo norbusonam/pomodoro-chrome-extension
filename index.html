@@ -2,9 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width,user-scalable=no">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <link rel="stylesheet" href="style.css">
+        <meta name="theme-color" content="#ecd96f">
+        <title>Pomodoro Timer</title>
     </head>
     <body>
 
@@ -13,10 +15,10 @@
             <!-- NAVIGATOR -->
             <div class="tabs is-centered">
                 <ul>
-                    <li class="tab" data-target="pomodoro">
+                    <li class="tab is-active" data-target="pomodoro">
                         <a>Pomodoro</a>
                     </li>
-                    <li class="tab is-disabled" data-target="short-break">
+                    <li class="tab" data-target="short-break">
                         <a>Short Break</a>
                     </li>
                     <li class="tab" data-target="long-break">
@@ -37,7 +39,7 @@
                         <button id="longerButton" class="button is-info is-fullwidth">Longer</button>
                     </div>
                     <div>
-                        <button id="stopResetButton" class="button is-danger is-fullwidth">Stop</button>
+                        <button id="stopResetButton" class="button is-danger is-fullwidth" disabled>Stop</button>
                     </div>
                     <div>
                         <button id="startButton" class="button is-success is-fullwidth">Start</button>
