@@ -15,6 +15,9 @@ let activeTimer = null
 let timeElapsed = 0
 let timerId = null
 
+// assets
+let bellSound = new Audio('./sounds/alarm.wav')
+
 // get latest length values
 chrome.storage.sync.get(['pomodoroLength', 'shortBreakLength', 'longBreakLength'],
     (result) => {
@@ -110,7 +113,7 @@ const sendNotification = (timerFinished) => {
         message = 'Ready for a pomodoro?'
     }
     chrome.notifications.clear(NOTIFICATIONID)
-    new Audio('./sounds/alarm.wav').play()
+    bellSound.play()
     chrome.notifications.create(NOTIFICATIONID, {
         title,
         message,
@@ -209,6 +212,14 @@ stopResetButton.addEventListener('click', () => {
 chrome.notifications.onButtonClicked.addListener((notificationId, buttonIndex) => {
     if (notificationId === NOTIFICATIONID && buttonIndex == 0) {
         startButton.click()
+    }
+})
+
+// on notification clicked
+chrome.notifications.onClicked.addListener(notificationId => {
+    if (notificationId === NOTIFICATIONID) {
+        window.focus();
+        chrome.notifications.clear(NOTIFICATIONID)
     }
 })
 
